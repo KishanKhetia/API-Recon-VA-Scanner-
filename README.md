@@ -388,45 +388,14 @@ pip install -r requirements-dev.txt
 pytest tests/
 ```
 
----
-
-## 📜 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
----
-
 ## 🙏 Acknowledgments
 
 - [OWASP API Security Project](https://owasp.org/www-project-api-security/)
 - [OWASP API Security Top 10 2023](https://owasp.org/API-Security/editions/2023/en/0x00-header/)
 - [Burp Suite](https://portswigger.net/burp) for manual verification workflows
 
----
-
-## 📧 Contact
-
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
-
-Project Link: [https://github.com/yourusername/api-security-toolkit](https://github.com/yourusername/api-security-toolkit)
-
----
-
 <p align="center">
   <b>🔒 Secure APIs. Automated. Simplified.</b>
 </p>
 """
 
-# Save README
-with open('/mnt/kimi/output/README.md', 'w') as f:
-    f.write(readme_content)
-
-print("✅ README.md created successfully!")
-print("\n📄 File saved: README.md")
-print("\n🎯 Features:")
-print("  • Professional GitHub formatting with badges")
-print("  • Comprehensive usage examples")
-print("  • CI/CD integration examples")
-print("  • OWASP coverage matrix")
-print("  • Troubleshooting guide")
-print("  • MIT License ready")
