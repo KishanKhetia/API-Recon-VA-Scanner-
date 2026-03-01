@@ -1,6 +1,4 @@
-# API-Recon-VA-Scanner-
-
-readme_content = """# 🔍 API Security Toolkit v3.0
+# 🔍 API Security Toolkit v1.0
 
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
