@@ -1,0 +1,44 @@
+# Extract all import statements
+import re
+
+# Find all import lines
+import_lines = []
+for line in code_content.split('\n'):
+    line = line.strip()
+    if line.startswith('import ') or line.startswith('from '):
+        import_lines.append(line)
+
+print("📋 All imports found in api_security_toolkit.py:")
+print("="*60)
+for imp in import_lines:
+    print(f"  {imp}")
+
+print("\n" + "="*60)
+print("\n🔍 Analysis:")
+
+# Categorize imports
+stdlib_modules = []
+third_party_modules = []
+
+for imp in import_lines:
+    # Extract module name
+    if imp.startswith('import '):
+        module = imp.split()[1].split('.')[0]
+    elif imp.startswith('from '):
+        module = imp.split()[1].split('.')[0]
+    else:
+        continue
+    
+    # Check if stdlib
+    if module in ['argparse', 'json', 're', 'time', 'sys', 'os', 'base64', 'urllib']:
+        stdlib_modules.append(module)
+    else:
+        third_party_modules.append(module)
+
+print(f"\nStandard Library (built-in, no install needed):")
+for mod in sorted(set(stdlib_modules)):
+    print(f"  ✓ {mod}")
+
+print(f"\nThird-Party (need pip install):")
+for mod in sorted(set(third_party_modules)):
+    print(f"  📦 {mod}")
